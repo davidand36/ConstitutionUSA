@@ -3,15 +3,24 @@
 */
 
 body {
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
     font-family: 'Libre Baskerville', serif;
-    background-color: rgb( 247, 240, 226 );
+    background-color: rgb( 247, 240, 226);
 }
 
 h1 {
     text-align: center;
+}
+
+main,
+.controls {
+    max-width: 50rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .preamble-label, .article-label, .amendments-label, .amendment-label {
@@ -60,4 +69,13 @@ button {
 
 .primary-button:hover {
     background-color: #e3f0f7;
+}
+
+footer {
+    min-height: 2rem;
+    margin-top: auto;
+    border-top: #000d74 solid thin;
+    padding-top: 0.5rem;
+    background-color: #b9d9eb;
+    text-align: center;
 }
