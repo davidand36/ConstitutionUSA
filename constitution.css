@@ -18,7 +18,7 @@ h1 {
 main,
 .controls {
     max-width: 50rem;
-    width: 100%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -43,7 +43,6 @@ main,
 .controls {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
@@ -72,10 +71,9 @@ button {
 }
 
 footer {
-    min-height: 2rem;
     margin-top: auto;
     border-top: #000d74 solid thin;
-    padding-top: 0.5rem;
+    padding: 0.5rem 1rem;
     background-color: #b9d9eb;
     text-align: center;
 }
