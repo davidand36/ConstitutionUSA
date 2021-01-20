@@ -77,3 +77,13 @@ footer {
     background-color: #b9d9eb;
     text-align: center;
 }
+
+@media (max-device-width: 420px) {
+    button {
+        font-size: 2rem;
+    }
+
+    [role="treeitem"] {
+        margin: 1rem 0;
+    }
+}
