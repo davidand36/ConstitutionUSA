@@ -1,0 +1,47 @@
+Registed constitution-usa.info at porkbun.com ($14.86/yr).
+
+Created AWS S3 bucket constitution-usa.info.
+Unchecked "block public access" options.
+Properties -> Static website hosting -> Edit
+    Enable
+    Host a static website
+    Index document: index.html
+    Error document: error.html (seems to be required)
+    Save Changes
+Bucket website endpoint is http://constitution-usa.info.s3-website-us-west-2.amazonaws.com
+Permissions -> Bucket policy -> Edit
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "PublicReadGetObject",
+                "Effect": "Allow",
+                "Principal": "*",
+                "Action": [
+                    "s3:GetObject"
+                ],
+                "Resource": [
+                    "arn:aws:s3:::constitution-usa.info/*"
+                ]
+            }
+        ]
+    }
+Objects -> Upload
+    Add Files (Choose the files for the site.)
+Test by opening the website endpoint in browser.
+
+Create AWS S3 bucket www.constitution-usa.info
+Unchecked "block public access" options.
+Properties -> Static website hosting -> Edit
+    Enable
+    Redirect requests for an object
+    Host name: constitution-usa.info
+    Protocol: http
+
+At Porkbun, for this domain:
+DNS Records -> Edit:
+    Create an ALIAS record, mapping
+        constitution-usa.info -> constitution-usa.info.s3-website-us-west-2.amazonaws.com
+    Create a CNAME record, mapping
+        www.constitution-usa.info -> www.constitution-usa.info.s3-website-us-west-2.amazonaws.com
+
